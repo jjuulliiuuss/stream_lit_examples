@@ -1,25 +1,23 @@
 import pandas as pd
 
 import streamlit as st
-from st_pages import Page, show_pages, add_page_title
+from st_pages import Page, show_pages, add_page_title, Section
 
 # Specify what pages should be shown in the sidebar, and what their titles 
 # and icons should be
 
 show_pages(
     [
-        Page("example_1.py", "Home", "🏠"),
-        Page("pages/page_3.py", "Product Configuration", "🏠"),
-        Page("pages/page_2.py", "Run Standard Reports", "🏠"),
-        Page("pages/page_4.py", "Closed Ended Liquidity", "🏠")
+        Page("example_1.py", "Home", "🏠"), 
+        Page("pages/page_3.py", "Product Configuration"),
+        Page("pages/page_2.py", "Standard Reports"),
+        Page("pages/page_4.py", "Closed Ended Liquidity")
     ]
 )
 
-
-
 def func_1():
 
-    st.write("Here's our first attempt at using data to create a table:")
+    st.write("First attempt at using data to create a table:")
     df_1 = pd.DataFrame({
                     'first column': [1, 2, 3, 4],
                     'second column': [10, 20, 30, 40]})
@@ -30,17 +28,7 @@ def func_1():
 
     st.write(st.session_state.name)
 
-    add_selectbox = st.sidebar.selectbox(
-    'How would you like to be contacted?',
-    ('Email', 'Home phone', 'Mobile phone')
-)
 
-    # Add a slider to the sidebar:
-    add_slider = st.sidebar.slider(
-        'Select a range of values',
-        0.0, 100.0, (25.0, 75.0)
-)
-    st.sidebar.markdown("# Main page 🎈")
 
     left_column, right_column = st.columns(2)
     # You can use a column just like st.sidebar:
