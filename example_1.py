@@ -5,12 +5,16 @@ from st_pages import Page, show_pages, add_page_title
 
 # Specify what pages should be shown in the sidebar, and what their titles 
 # and icons should be
+
 show_pages(
     [
-        Page("streamlitt_examples/example_1.py", "Home", "🏠"),
-        Page("streamlitt_examples/pages/page_2.py", "Home2", "🏠")
+        Page("example_1.py", "Home", "🏠"),
+        Page("pages/page_3.py", "Product Configuration", "🏠"),
+        Page("pages/page_2.py", "Run Standard Reports", "🏠"),
+        Page("pages/page_4.py", "Closed Ended Liquidity", "🏠")
     ]
 )
+
 
 
 def func_1():

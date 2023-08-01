@@ -2,22 +2,6 @@ import pandas as pd
 import datetime
 
 import streamlit as st
-from st_pages import Page, show_pages, add_page_title
-
-
-
-add_page_title()
-
-# Specify what pages should be shown in the sidebar, and what their titles 
-# and icons should be
-show_pages(
-    [
-        Page("streamlitt_examples/example_1.py", "Home", "🏠")
-        Page("streamlitt_examples/pages/page_2.py", "Home2", "🏠")
-
-    ]
-)
-streamlitt_examples
 
 st.markdown("### Report run")
 st.sidebar.markdown("# Settings")
